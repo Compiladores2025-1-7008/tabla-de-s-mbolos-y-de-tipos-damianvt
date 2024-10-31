@@ -1,6 +1,6 @@
 import java.util.Optional;
 
-public interface SymbolTableStack{
+public interface SymbolTableStack {
     void push(SymbolTable table);
     SymbolTable pop();
     Optional<SymbolTable> peek();
