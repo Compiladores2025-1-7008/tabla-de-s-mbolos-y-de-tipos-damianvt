@@ -7,27 +7,50 @@ public class TypeTableImpl implements TypeTable{
 
     @Override
     public int getTam(int id) {
-        return types.containsKey(id) ? types.get(id).getTam() : -1;
+        if (types.containsKey(id)) {
+            return types.get(id).getTam();
+        } else {
+            return -1;
+        }
     }
 
     @Override
     public int getItems(int id) {
-        return types.containsKey(id) ? types.get(id).getItems() : -1;
+        if (types.containsKey(id)) {
+            return types.get(id).getItems();
+        } else {
+            return -1;
+            
+        }
     }
 
     @Override
     public String getName(int id) {
-        return types.containsKey(id) ? types.get(id).getName() : null;
+        if (types.containsKey(id)) {
+            return types.get(id).getName();
+        } else {
+            return null;
+            
+        }
     }
 
     @Override
     public int getParenId(int id) {
-        return types.containsKey(id) ? types.get(id).getParenId() : -1;
+        if (types.containsKey(id)) {
+            return types.get(id).getParenId();
+        } else {
+            return -1;
+            
+        }
     }
 
     @Override
     public SymbolTable getParentStruct(int id) {
-        return types.containsKey(id) ? types.get(id).getParentStruct() : null;
+        if (types.containsKey(id)) {
+            return types.get(id).getParentStruct();
+        } else {
+            return null;   
+        }
     }
 
     @Override
